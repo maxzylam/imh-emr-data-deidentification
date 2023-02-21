@@ -27,6 +27,11 @@ library("data.table")
 library("digest")
 ``` 
 
+Set the working directory - this is usually the folder that you will be working out of. In this instance, my working directory is the Desktop on my computer
+```
+setwd("~/Desktop")
+```
+
 Read in toy data to test the de-identification script. The toy data is in .csv format. We would also expect that the data to be identified by saved as .csv or .txt. CSV files however are highly recommended. However, in rare cases, if there are commas within data fields, CSV files would not work, and other demiliter solutions might be necessary, in those cases, data.table would also be able to handle .tab delimited format. 
 
 Users should also take note of the path where the CSV file resides - here, the file resides on my computer as /Users/maxlam/Desktop/toy-data-ident-scripts.csv. Replace the path in R when you are reading other files for de-identification. 
