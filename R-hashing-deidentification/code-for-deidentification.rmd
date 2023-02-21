@@ -1,0 +1,5 @@
+# R scripts for SHA256 HASHING
+## The following r scripts will carry out data hashing for de-identifying NAMES and NRIC from Electronic Health Records Data 
+### Scripts is to be used within IMH Corporate laptops for data security purposes 
+
+'''
