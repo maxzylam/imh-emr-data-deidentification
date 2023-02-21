@@ -66,7 +66,7 @@ write.table(ID_master, file = "ID_KEY_master.csv", sep=",", row.names=FALSE, quo
 The data de-identification step will involve applying the vectorized hash function onto the electronic records, and then re-saving the file, omitting the identifiers. 
 ```
 deidentified_dat <- identified_dat %>% mutate(nric_sha256 = hashfunct_V(NRIC)) %>% mutate(name_sha256 = hashfunct_V(NAME)) %>% select(., -NAME, -NRIC)
-write.table(identified_dat, file = "Deidentified_dat.csv", sep=",", row.names=FALSE, quote=FALSE)
+write.table(deidentified_dat, file = "Deidentified_dat.csv", sep=",", row.names=FALSE, quote=FALSE)
 ```
 
 At the end of this exercise, there will be two files as the output (i) master-ID consisting of NRIC, hashed NRIC, NAME, hashed NAME and (ii) deidentified dataset. Note: The procedure can be carried out on multiple data sources without file merging first. Once the data has been de-identified file merging can be carried out using the hashed NRIC key. 
